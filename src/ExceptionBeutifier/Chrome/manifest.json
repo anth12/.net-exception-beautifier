@@ -1,0 +1,20 @@
+﻿{
+  "name": "Prettify .net Exception ",
+  "description": "Prittifies the .net Exception page",
+  "version": "0.0.1",
+  "options_page": "options.html",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "run_at": "document_end",
+            "js": [ "ContentScript.js" ],
+            "css": [ "ContentScript.css" ]
+        }
+    ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}
