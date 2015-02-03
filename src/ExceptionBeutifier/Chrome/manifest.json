@@ -2,6 +2,9 @@
   "name": "Prettify .net Exception ",
   "description": "Prittifies the .net Exception page",
   "version": "0.0.1",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
   "options_page": "options.html",
   "permissions": [
     "activeTab",
