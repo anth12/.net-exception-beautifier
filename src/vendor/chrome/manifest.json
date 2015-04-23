@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": ".net exception beutifier",
+    "description": "Beautifies the standard .net error screen",
+	"version": "0.0.1",
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+
+    "options_page": "html/options.html",
+	"content_scripts": [{
+		"run_at": "document_end",
+		"css": ["css/content.css"],
+		"js": [
+			"js/content.js"
+		],
+		"matches": [
+            "*://*/*",
+            "http://*/*",
+            "https://*/*"
+		]
+	}],
+
+	"icons" : {
+		"16": "img/logo_16px.png",
+		"48" : "img/logo_48px.png",
+		"128" : "img/logo_128px.png"
+	},
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

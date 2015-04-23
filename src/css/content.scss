@@ -1,0 +1,10 @@
+/*.net exception prettify*/
+
+body.beautify-exception{
+    padding: 0px 20px;
+
+    //Remove the background on 'code' tags as a 'pre' is nested within.
+    code{
+        background: none;
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "id": "8c40c389-fa71-0fc1-356b-ea6bdfafa7d",
+	"license": "MIT",
+    "name": ".net exception beutifier",
+    "description": "Beautifies the standard .net error screen",
+	"contributors": [],
+    "author": "http://thepixelforge.co.uk",
+    "url": "http://github.com/anth12/.net-exception-beautifier",
+	"version": "0.0.1",
+	"lib": "data",
+	"main": "data/main",
+	"data": "data",
+	"icon": "data/img/logo_48px.png",
+    "fullName": ".net exception beutifier",
+	"permissions": {
+        
+	}
+}
