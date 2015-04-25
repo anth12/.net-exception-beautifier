@@ -4,6 +4,7 @@ Browser extensions for _beautifying_ the Yellow Screen Of Death (YSOD) using the
 
 Browsers supported:
 - Chrome
+- Opera
 - Firefox (Planned)
 - Opera (Planned)
 - Safari (Planned)
@@ -16,4 +17,4 @@ TODO:
 - Potentially support additional servers
 
 ## Disclaimer
-I hope it does not need to be stated but these extensions are purly splashing a lick of paint over the standard .net error screen shown during development. The YOSD should never be seen in production and this repo will not aid in hiding it.
+I hope it does not need to be stated but these extensions are purely splashing a lick of paint over the standard .net error screen shown during development. The YOSD should never be seen in production and this repo will not aid in hiding it.

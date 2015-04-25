@@ -52,6 +52,18 @@ gulp.task('chrome', ['sass'], function() {
 	);
 });
 
+gulp.task('opera', ['sass'], function() {
+    return es.merge(
+        pipe('./html/*.html', './build/opera/html'),
+        pipe('./img/**/*', './build/opera/img'),
+        pipe('./js/*.js', './build/opera/js'),
+        pipe('./css/*.css', './build/opera/css'),
+
+        pipe('./vendor/opera/browser.js', './build/opera/js'),
+        pipe('./vendor/opera/manifest.json', './build/opera/')
+    );
+});
+
 gulp.task('firefox', ['sass'], function() {
 	return es.merge(
         pipe('./html/*.html', './build/firefox/data/html'),
@@ -84,6 +96,12 @@ gulp.task('chrome-dist', function () {
 		.pipe(gulp.dest('./dist/chrome'));
 });
 
+gulp.task('opera-dist', function () {
+    gulp.src('./build/opera/**/*')
+    .pipe(zip('opera-extension-' + chrome.version + '.zip'))
+    .pipe(gulp.dest('./dist/opera'));
+});
+
 gulp.task('firefox-dist', shell.task([
 	'mkdir -p dist/firefox',
 	'cd ./build/firefox && ../../tools/addon-sdk-1.16/bin/cfx xpi --output-file=../../dist/firefox/firefox-extension-' + firefox.version + '.xpi > /dev/null',
@@ -97,7 +115,7 @@ gulp.task('firefox-run', shell.task([
 	'cd ./build/firefox && ../../tools/addon-sdk-1.16/bin/cfx run',
 ]));
 
-gulp.task('dist', ['clean', 'chrome', 'firefox', 'safari', 'chrome-dist', 'firefox-dist', 'safari-dist'], function(cb) {
+gulp.task('dist', ['clean', 'chrome', 'opera', 'firefox', 'safari', 'chrome-dist', 'opera-dist', 'firefox-dist', 'safari-dist'], function(cb) {
 	
 });
 
@@ -113,6 +131,6 @@ gulp.task('addons', shell.task([
 	'cp -R ./dist ../addons'
 ]));
 
-gulp.task('default', ['clean', 'chrome', 'firefox', 'safari'], function(cb) {
+gulp.task('default', ['clean', 'chrome', 'opera', 'firefox', 'safari'], function(cb) {
 	
 });

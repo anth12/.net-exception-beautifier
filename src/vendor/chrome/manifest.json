@@ -5,7 +5,6 @@
 	"version": "0.0.1",
 
     "permissions": [
-        "activeTab",
         "storage"
     ],
 
@@ -18,7 +17,7 @@
 			"js/content.js"
 		],
 		"matches": [
-            "*://*/*"
+            "<all_urls>"
 		]
 	}],
 

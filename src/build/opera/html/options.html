@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>.net Exception Beuitifier options</title>
+        <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/superhero/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #status {
+                transition: all 0.5s ease;
+                opacity: 0;
+            }
+            #status.active {
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1>.net Exception Beuitifier options</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="theme">Theme</label>
+                            <select id="theme" class="form-control">
+                                <option value="Cerulean">Cerulean</option>
+                                <option value="Cyborg">Cyborg</option>
+                                <option value="Darkly">Darkly</option>
+                                <option value="Flatly">Flatly</option>
+                                <option value="Sandstone">Sandstone</option>
+                                <option value="Slate">Slate</option>
+                                <option value="Spacelab">Spacelab</option>
+                                <option value="Superhero">Superhero</option>
+                            </select>
+                        </div>
+                        <span id="status" class="text-success">Setting updated</span>
+                    </form>
+                    
+                </div>
+                <div class="col-md-12">
+                    <h2>Preview:</h2>
+                    <iframe src="example.html" id="preview" style="width: 100%; min-height: 500px"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+    <script src="../js/browser.js"></script>
+    <script src="../js/options.js"></script>
+</body>
+</html>
