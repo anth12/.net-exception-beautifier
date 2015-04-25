@@ -42,10 +42,11 @@ gulp.task('sass', function(done) {
 
 gulp.task('chrome', ['sass'], function() {
 	return es.merge(
-        pipe('./html/**/*', './build/chrome/html'),
+        pipe('./html/*.html', './build/chrome/html'),
 		pipe('./img/**/*', './build/chrome/img'),
         pipe('./js/*.js', './build/chrome/js'),
 		pipe('./css/*.css', './build/chrome/css'),
+        
 		pipe('./vendor/chrome/browser.js', './build/chrome/js'),
 		pipe('./vendor/chrome/manifest.json', './build/chrome/')
 	);
@@ -53,10 +54,11 @@ gulp.task('chrome', ['sass'], function() {
 
 gulp.task('firefox', ['sass'], function() {
 	return es.merge(
-        pipe('./html/**/*', './build/firefox/data/html'),
+        pipe('./html/*.html', './build/firefox/data/html'),
 		pipe('./img/**/*', './build/firefox/data/img'),
 		pipe('./js/*.js', './build/firefox/data/js'),
         pipe('./css/*.css', './build/firefox/data/css'),
+        
 		pipe('./vendor/firefox/browser.js', './build/firefox/data/js'),
 		pipe('./vendor/firefox/main.js', './build/firefox/data'),
 		pipe('./vendor/firefox/package.json', './build/firefox/')
@@ -65,10 +67,11 @@ gulp.task('firefox', ['sass'], function() {
 
 gulp.task('safari', ['sass'], function() {
 	return es.merge(
-        pipe('./html/**/*', './build/safari/ExceptionBeutifier.safariextension/html'),
+        pipe('./html/*.html', './build/safari/ExceptionBeutifier.safariextension/html'),
 		pipe('./img/**/*', './build/safari/ExceptionBeutifier.safariextension/img'),
         pipe('./js/*.js', './build/safari/ExceptionBeutifier.safariextension/js'),
         pipe('./css/*.css', './build/safari/ExceptionBeutifier.safariextension/css'),
+        
         pipe('./vendor/safari/browser.js', './build/safari/ExceptionBeutifier.safariextension/js'),
         pipe('./vendor/safari/Info.plist', './build/safari/ExceptionBeutifier.safariextension'),
         pipe('./vendor/safari/Settings.plist', './build/safari/ExceptionBeutifier.safariextension')

@@ -2,6 +2,9 @@
   "name": "dot-net-exception-beutifier",
   "version": "0.0.1",
   "description": "Browser plugins to beautify the standard .net error screen",
+  "author": "Anthony Halliday- http://thepixelforge.co.uk",
+  "license": "MIT",
+    
   "main": "gulpfile.js",
   "devDependencies": {
     "event-stream": "~3.1.5",
@@ -14,12 +17,14 @@
     "gulp-shell": "^0.2.5",
     "gulp-zip": "~0.3.4"
   },
+  "scripts": {
+    "start": "gulp watch",
+    "predeploy": "gulp dist"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/anth12/.net-exception-beautifier.git"
-  },
-  "author": "http://thepixelforge.co.uk",
-  "license": "MIT",
+  },  
   "bugs": {
     "url": "http://github.com/anth12/.net-exception-beautifier/issues"
   },
