@@ -5,6 +5,14 @@
 	app.browser = {
 		name: 'Opera',
 
+        absoluteUrl: function(path){
+            ///<summary>Creates an absolute Url for the extentions</summary>
+            ///<param name="path">relative path to the resource</param>
+            ///<returns type="string">Absolute Url to resource</returns>
+
+            return chrome.extension.getURL(path);
+        },
+
 		getStorage: function (storagePropertyKey, defaultValue, callback) {
             ///<summary>retrieves a stored value from the browser extsion storage</summary>
             ///<param name="storagePropertyKey" type="string">Key of the setting</param>

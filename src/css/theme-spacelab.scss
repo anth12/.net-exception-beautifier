@@ -1,0 +1,100 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+} 
+body {
+    margin: 0 0 0 0;
+} 
+b, strong {
+    font-weight: bold;
+} 
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0 0.67em 0;
+} 
+hr {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+} 
+pre {
+    overflow: auto;
+} 
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+} 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+} 
+td, th {
+    padding: 0 0 0 0;
+} 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} 
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #666666;
+    background-color: #ffffff;
+} 
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0 none -moz-initial;
+    border-top: 1px solid #eeeeee;
+} 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #2d2d2d;
+} 
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+} 
+h1, .h1 {
+    font-size: 36px;
+} 
+h2, .h2 {
+    font-size: 30px;
+} 
+code, kbd, pre, samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+} 
+code {
+    padding: 2px 4px 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+} 
+pre {
+    display: block;
+    padding: 9.5px 9.5px 9.5px 9.5px;
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333333;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+} 
+table {
+    background-color: transparent;
+} 

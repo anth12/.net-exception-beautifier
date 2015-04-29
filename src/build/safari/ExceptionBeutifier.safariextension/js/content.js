@@ -56,7 +56,7 @@
                 var ss = document.createElement("link");
                 ss.type = "text/css";
                 ss.rel = "stylesheet";
-                ss.href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.2/" + options.theme.toString().toLowerCase() + "/bootstrap.min.css";
+                ss.href = app.browser.absoluteUrl("/css/theme-" + options.theme.toString().toLowerCase() + ".css");
                 document.getElementsByTagName("head")[0].appendChild(ss);
 
             });

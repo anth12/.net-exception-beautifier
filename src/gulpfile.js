@@ -36,70 +36,70 @@ gulp.task('sass', function(done) {
     gulp.src('./css/*.scss')
         .pipe(sass())
         .pipe(minifyCSS())
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('./css/min/'))
         .on('end', done);;
 });
 
 gulp.task('chrome', ['sass'], function() {
 	return es.merge(
-        pipe('./html/*.html', './build/chrome/html'),
-		pipe('./img/**/*', './build/chrome/img'),
-        pipe('./js/*.js', './build/chrome/js'),
-		pipe('./css/*.css', './build/chrome/css'),
+        pipe('./html/*.html', './build/chrome/html/'),
+		pipe('./img/**/*', './build/chrome/img/'),
+        pipe('./js/*.js', './build/chrome/js/'),
+		pipe('./css/min/*.css', './build/chrome/css/'),
         
-		pipe('./vendor/chrome/browser.js', './build/chrome/js'),
+		pipe('./vendor/chrome/browser.js', './build/chrome/js/'),
 		pipe('./vendor/chrome/manifest.json', './build/chrome/')
 	);
 });
 
 gulp.task('opera', ['sass'], function() {
     return es.merge(
-        pipe('./html/*.html', './build/opera/html'),
-        pipe('./img/**/*', './build/opera/img'),
-        pipe('./js/*.js', './build/opera/js'),
-        pipe('./css/*.css', './build/opera/css'),
+        pipe('./html/*.html', './build/opera/html/'),
+        pipe('./img/**/*', './build/opera/img/'),
+        pipe('./js/*.js', './build/opera/js/'),
+        pipe('./css/min/*.css', './build/opera/css/'),
 
-        pipe('./vendor/opera/browser.js', './build/opera/js'),
+        pipe('./vendor/opera/browser.js', './build/opera/js/'),
         pipe('./vendor/opera/manifest.json', './build/opera/')
     );
 });
 
 gulp.task('firefox', ['sass'], function() {
 	return es.merge(
-        pipe('./html/*.html', './build/firefox/data/html'),
-		pipe('./img/**/*', './build/firefox/data/img'),
-		pipe('./js/*.js', './build/firefox/data/js'),
-        pipe('./css/*.css', './build/firefox/data/css'),
+        pipe('./html/*.html', './build/firefox/data/html/'),
+		pipe('./img/**/*', './build/firefox/data/img/'),
+		pipe('./js/*.js', './build/firefox/data/js/'),
+        pipe('./css/min/*.css', './build/firefox/data/css'),
         
-		pipe('./vendor/firefox/browser.js', './build/firefox/data/js'),
-		pipe('./vendor/firefox/main.js', './build/firefox/data'),
+		pipe('./vendor/firefox/browser.js', './build/firefox/data/js/'),
+		pipe('./vendor/firefox/main.js', './build/firefox/data/'),
 		pipe('./vendor/firefox/package.json', './build/firefox/')
 	);
 });
 
 gulp.task('safari', ['sass'], function() {
 	return es.merge(
-        pipe('./html/*.html', './build/safari/ExceptionBeutifier.safariextension/html'),
-		pipe('./img/**/*', './build/safari/ExceptionBeutifier.safariextension/img'),
-        pipe('./js/*.js', './build/safari/ExceptionBeutifier.safariextension/js'),
-        pipe('./css/*.css', './build/safari/ExceptionBeutifier.safariextension/css'),
+        pipe('./html/*.html', './build/safari/ExceptionBeutifier.safariextension/html/'),
+		pipe('./img/**/*', './build/safari/ExceptionBeutifier.safariextension/img/'),
+        pipe('./js/*.js', './build/safari/ExceptionBeutifier.safariextension/js/'),
+        pipe('./css/min/*.css', './build/safari/ExceptionBeutifier.safariextension/css/'),
         
-        pipe('./vendor/safari/browser.js', './build/safari/ExceptionBeutifier.safariextension/js'),
-        pipe('./vendor/safari/Info.plist', './build/safari/ExceptionBeutifier.safariextension'),
-        pipe('./vendor/safari/Settings.plist', './build/safari/ExceptionBeutifier.safariextension')
+        pipe('./vendor/safari/browser.js', './build/safari/ExceptionBeutifier.safariextension/js/'),
+        pipe('./vendor/safari/Info.plist', './build/safari/ExceptionBeutifier.safariextension/'),
+        pipe('./vendor/safari/Settings.plist', './build/safari/ExceptionBeutifier.safariextension/')
 	);
 });
 
 gulp.task('chrome-dist', function () {
 	gulp.src('./build/chrome/**/*')
 		.pipe(zip('chrome-extension-' + chrome.version + '.zip'))
-		.pipe(gulp.dest('./dist/chrome'));
+		.pipe(gulp.dest('./dist/chrome/'));
 });
 
 gulp.task('opera-dist', function () {
     gulp.src('./build/opera/**/*')
     .pipe(zip('opera-extension-' + chrome.version + '.zip'))
-    .pipe(gulp.dest('./dist/opera'));
+    .pipe(gulp.dest('./dist/opera/'));
 });
 
 gulp.task('firefox-dist', shell.task([
@@ -108,7 +108,7 @@ gulp.task('firefox-dist', shell.task([
 ]));
 
 gulp.task('safari-dist', function () {
-	pipe('./vendor/safari/Update.plist', './dist/safari');
+	pipe('./vendor/safari/Update.plist', './dist/safari/');
 });
 
 gulp.task('firefox-run', shell.task([
