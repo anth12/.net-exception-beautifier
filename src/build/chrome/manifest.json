@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": ".net exception beutifier",
     "description": "Beautifies the standard .net error screen",
-	"version": "0.0.1",
+	"version": "0.0.2",
 
     "permissions": [
         "storage"
@@ -35,7 +35,7 @@
         "css/theme-flatly.css",
         "css/theme-sandstone.css",
         "css/theme-slate.css",
-        "css/theme-spacelabs.css",
+        "css/theme-spacelab.css",
         "css/theme-superhero.css"
     ]
 }

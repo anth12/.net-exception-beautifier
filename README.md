@@ -13,7 +13,6 @@ the awesome Bootstrap themes from Bootswatch.
 
 
 ### TODO: 
-- Localise style references and trim down to mimimum requirements 
 - Reduce deplay in beautification 
 - Potentially support additional servers
 

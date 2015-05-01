@@ -6,7 +6,7 @@
 	"contributors": [],
     "author": "http://thepixelforge.co.uk",
     "url": "http://github.com/anth12/.net-exception-beautifier",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"lib": "data",
 	"main": "data/main",
 	"data": "data",
