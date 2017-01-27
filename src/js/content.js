@@ -8,7 +8,7 @@
 
             var body = document.getElementsByTagName('body')[0];
 
-            if (this.isDotNetErrorPage(body)) {
+            if (body != null && this.isDotNetErrorPage(body)) {
 
                 this.beutifyErrorPage(body);
 
